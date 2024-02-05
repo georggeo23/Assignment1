@@ -15,26 +15,26 @@
     <h2>Results</h2>
     <div class="choice-container">
         <div>
-            <img src="../static/images/burger.png" class="giftbox" alt="gift"
-                 th:src="@{|/images/${gameData.GiftReceived}.png|}" th:alt="${gameData.userChoice}">
-            <p>Chest 1</p>
+            <img src="../static/images/burger.png" class="choice" alt="item"
+                 th:src="@{|/images/${gameData.giftReceived}.png|}" th:alt="${gameData.userChoice}">
+            <p>Box 1</p>
         </div>
         <div>
-            <img src="../static/images/pc.png" class="giftbox" alt="gift"
-                 th:src="@{|/images/${gameData.GiftReceived}.png|}" th:alt="${gameData.userChoice}">
-            <p>Chest 2</p>
+            <img src="../static/images/pc.png" class="choice" alt="item"
+                 th:src="@{|/images/${gameData.giftReceived}.png|}" th:alt="${gameData.userChoice}">
+            <p>Box 2</p>
         </div>
         <div>
             <img src="../static/images/money_bag.png" class="choice" alt="item"
-                 th:src="@{|/images/${gameData.GiftReceived}.png|}" th:alt="${gameData.userChoice}">
-            <p>Chest 3</p>
+                 th:src="@{|/images/${gameData.giftReceived}.png|}" th:alt="${gameData.userChoice}">
+            <p>Box 3</p>
         </div>
     </div>
     <p>
-        <label>The Chest You Choose Was:</label>&nbsp;<span th:text="${gameData.userChoice}">GiftBox</span>
+        <label>The Box You Chose Was:</label>&nbsp;<span th:text="${gameData.userChoice}">GiftBox</span>
     </p>
     <p>
-        <label>You Won:</label>&nbsp;<span th:text="${gameData.GiftReceived}">Gift</span>
+        <label>You Won:</label>&nbsp;<span th:text="${gameData.giftReceived}">Gifts</span>
     </p>
     <p>
         <a href="Input.html" th:href="@{/input}">Play Again!</a>
