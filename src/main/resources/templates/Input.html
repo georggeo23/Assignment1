@@ -15,21 +15,21 @@
     <h2>Select your choice</h2>
     <form action="Output.html" th:action="@{/play}">
 
+
         <div class="choice-container">
             <div>
-                <label><input type="radio" name="userChoice" th:value="PAPER">Box 1</label><br/>
-                <img class="choice" src="../static/images/gift-box.png" th:src="@{/images/gift-box.png}" alt="paper">
+                <img class="choice" src="../static/images/gift-box.png" th:src="@{/images/gift-box.png}" alt="chest1">
+                <div><label><input type="radio" name="userChoice" th:value="Box1">Box 1</label><br/></div>
             </div>
             <div>
-                <label><input type="radio" name="userChoice" th:value="ROCK" checked>Box 2</label><br/>
-                <img class="choice" src="../static/images/gift-box.png" th:src="@{/images/gift-box.png}" alt="rock">
+                <img class="choice" src="../static/images/gift-box.png" th:src="@{/images/gift-box.png}" alt="chest2">
+                <div><label><input type="radio" name="userChoice" th:value="Box2" checked>Box 2</label><br/></div>
             </div>
             <div>
-                <label><input type="radio" name="userChoice" th:value="SCISSORS">Box 3</label><br/>
-                <img class="choice" src="../static/images/gift-box.png" th:src="@{/images/gift-box.png}" alt="scissors">
+                <img class="choice" src="../static/images/gift-box.png" th:src="@{/images/gift-box.png}" alt="chest3">
+                <div><label><input type="radio" name="userChoice" th:value="Box3">Box 3</label><br/></div>
             </div>
         </div>
-
         <p>
             <input type="submit" value="Play">
         </p>

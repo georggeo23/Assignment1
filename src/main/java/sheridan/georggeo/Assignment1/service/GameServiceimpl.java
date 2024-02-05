@@ -5,7 +5,7 @@ import sheridan.georggeo.Assignment1.model.GiftBox;
 import sheridan.georggeo.Assignment1.model.GameData;
 import org.springframework.stereotype.Service;
 import java.util.Random;
-
+@Service
 public class GameServiceimpl implements GameService{
     private final Random random;
 
@@ -16,13 +16,13 @@ public class GameServiceimpl implements GameService{
     public GameServiceimpl() { this(new Random()); }
 
     @Override
-    public GameData getGameData(GiftBox playerChestChoice, Gifts itemReceived) {
+    public GameData getGameData(GiftBox playerChestChoice, Gifts giftReceived) {
 
         Gifts item1 = getRandomItem();
         Gifts item2 = getRandomItemsExcept(item1);
         Gifts item3 = getRandomItemExcept(item1, item2);
 
-        return new GameData(playerChestChoice, itemReceived);
+        return new GameData(playerChestChoice, giftReceived);
     }
 
     @Override
