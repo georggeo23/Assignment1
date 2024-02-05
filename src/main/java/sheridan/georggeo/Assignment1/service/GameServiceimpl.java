@@ -22,7 +22,7 @@ public class GameServiceimpl implements GameService{
         Gifts item2 = getRandomItemsExcept(item1);
         Gifts item3 = getRandomItemExcept(item1, item2);
 
-        return new GameData(playerChestChoice, giftReceived);
+        return new GameData(playerChestChoice,item1,item2,item3, giftReceived);
     }
 
     @Override
@@ -46,5 +46,17 @@ public class GameServiceimpl implements GameService{
         }
         return randomItems;
     }
+    private Gifts selectRandomItem(GiftBox selectedChest, Gifts item1, Gifts item2, Gifts item3) {
 
+        switch (selectedChest) {
+            case Box1:
+                return item1;
+            case Box2:
+                return item2;
+            case Box3:
+                return item3;
+            default:
+                return null;
+        }
+    }
 }
