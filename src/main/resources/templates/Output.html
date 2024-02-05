@@ -9,32 +9,32 @@
 </head>
 <body>
 <header th:replace="~{HeaderAndFooter::Header}">
-    <h1>Some header text</h1>
+    <h1>TV SHOW</h1>
 </header>
 <main>
     <h2>Results</h2>
-<!--    <div class="choice-container">-->
-<!--        <div>-->
-<!--            <img src="../static/images/pikachu.png" class="choice" alt="item"-->
-<!--                 th:src="@{|/images/${gameData.itemReceived}.png|}" th:alt="${gameData.userChoice}">-->
-<!--            <p>Chest 1</p>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <img src="../static/images/iphone.png" class="choice" alt="item"-->
-<!--                 th:src="@{|/images/${gameData.itemReceived}.png|}" th:alt="${gameData.userChoice}">-->
-<!--            <p>Chest 2</p>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <img src="../static/images/candy.png" class="choice" alt="item"-->
-<!--                 th:src="@{|/images/${gameData.itemReceived}.png|}" th:alt="${gameData.userChoice}">-->
-<!--            <p>Chest 3</p>-->
-<!--        </div>-->
-<!--    </div>-->
+    <div class="choice-container">
+        <div>
+            <img src="../static/images/burger.png" class="giftbox" alt="gift"
+                 th:src="@{|/images/${gameData.GiftReceived}.png|}" th:alt="${gameData.userChoice}">
+            <p>Chest 1</p>
+        </div>
+        <div>
+            <img src="../static/images/pc.png" class="giftbox" alt="gift"
+                 th:src="@{|/images/${gameData.GiftReceived}.png|}" th:alt="${gameData.userChoice}">
+            <p>Chest 2</p>
+        </div>
+        <div>
+            <img src="../static/images/money_bag.png" class="choice" alt="item"
+                 th:src="@{|/images/${gameData.GiftReceived}.png|}" th:alt="${gameData.userChoice}">
+            <p>Chest 3</p>
+        </div>
+    </div>
     <p>
-        <label>The Chest You Choose Was:</label>&nbsp;<span th:text="${gameData.userChoice}">chest</span>
+        <label>The Chest You Choose Was:</label>&nbsp;<span th:text="${gameData.userChoice}">GiftBox</span>
     </p>
     <p>
-        <label>You Won:</label>&nbsp;<span th:text="${gameData.itemReceived}">item</span>
+        <label>You Won:</label>&nbsp;<span th:text="${gameData.GiftReceived}">Gift</span>
     </p>
     <p>
         <a href="Input.html" th:href="@{/input}">Play Again!</a>

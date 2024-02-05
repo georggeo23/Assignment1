@@ -2,19 +2,19 @@ package sheridan.georggeo.Assignment1.model;
 
 public class GameData {
     private final GiftBox userChoice;
-    private final Gifts itemReceived;
+    private final Gifts GiftReceived;
 
 
-    public GameData(GiftBox userChoice, Gifts itemReceived) {
+    public GameData(GiftBox userChoice, Gifts GiftReceived) {
         this.userChoice = userChoice;
-        this.itemReceived = itemReceived;
+        this.GiftReceived = GiftReceived;
     }
 
     public GiftBox getUserChoice() {
         return userChoice;
     }
-    public Gifts getItemReceived() {
-        return itemReceived;
+    public Gifts getGiftReceived() {
+        return GiftReceived;
     }
 
 
@@ -23,7 +23,7 @@ public class GameData {
     public String toString() {
         return "GameData{" +
                 "userChoice=" + userChoice +
-                "itemReceived=" + itemReceived +
+                "GiftReceived=" + GiftReceived +
                 '}';
     }
 }
